@@ -17,7 +17,7 @@ ENV PATH=/OrthoFinder/of3/bin:${PATH}
 # automake :: 1.18
 RUN cd / && curl -LO https://ftp.gnu.org/gnu/automake/automake-1.18.1.tar.gz && \
     tar -zxvf /automake-1.18.1.tar.gz && rm /automake-1.18.1.tar.gz && cd /automake-1.18.1/ && \
-    ./configure && make
+    ./configure && make && make install
 
 ENV PATH=/automake-1.18.1/bin:${PATH}
 
@@ -88,7 +88,7 @@ ENV PATH=/muscle-5.3/bin:${PATH}
 
 # fasttree
 RUN cd / && curl -LO https://github.com/morgannprice/fasttree/archive/refs/tags/v2.2.0.tar.gz && \
-    tar -zxvf /v2.2.0.tar.gz && rm /v2.2.0.tar.gz && cd /fasttree-2.2.0/ && \
+    tar -zxvf /v2.2.0.tar.gz && rm /v2.2.0.tar.gz
 
 ENV PATH=/fasttree-2.2.0:${PATH}
 
