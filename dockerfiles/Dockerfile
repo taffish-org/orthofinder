@@ -6,7 +6,8 @@ WORKDIR /root
 
 RUN apt-get update && apt-get install -y curl git gcc g++ make cmake python3-dev python3-pip python3-venv \
                                          libsqlite3-dev liblmdb-dev libzstd-dev libbz2-dev zlib1g-dev \
-                                         mcl libssl-dev flex bison libgmp3-dev unzip automake autoconf
+                                         mcl libssl-dev flex bison libgmp3-dev unzip \
+                                         automake autoconf libtool libtool-bin
 
 RUN cd / && git clone https://github.com/OrthoFinder/OrthoFinder.git && cd /OrthoFinder/ && \
     python3 -m venv of3 && . /OrthoFinder/of3/bin/activate && pip install .
