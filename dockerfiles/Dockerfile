@@ -101,7 +101,8 @@ ENV PATH=/standard-RAxML-8.2.13:${PATH}
 
 # raxml-ng
 RUN mkdir /raxml-ng && cd /raxml-ng && \
-    curl -LO https://github.com/amkozlov/raxml-ng/releases/download/1.2.2/raxml-ng_v1.2.2_linux_x86_64.zip
+    curl -LO https://github.com/amkozlov/raxml-ng/releases/download/1.2.2/raxml-ng_v1.2.2_linux_x86_64.zip && \
+    unzip /raxml-ng/raxml-ng_v1.2.2_linux_x86_64.zip && rm /raxml-ng/raxml-ng_v1.2.2_linux_x86_64.zip
 
 ENV PATH=/raxml-ng:${PATH}
 
